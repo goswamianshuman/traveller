@@ -11,6 +11,7 @@ import Testimonials from "../components/testimonials";
 import Cta from "../components/cta";
 import Faq from "../components/faq";
 import PopupWidget from "../components/popupWidget";
+import NewHero from "../components/NewHero";
 
 export default function Home() {
   return (
@@ -26,6 +27,7 @@ export default function Home() {
 
       <Navbar />
       <Hero />
+      {/* <NewHero /> */}
       <section className="max-w-7xl mx-auto">
         <SectionTitle
           pretitle="Nextly Benefits"

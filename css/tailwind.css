@@ -9,10 +9,10 @@
   }
 
   .Navbar {
-    @apply w-full sticky top-0 z-[50];
+    @apply w-full fixed top-0 z-[50];
   }
 
   .Navbar.active {
-    @apply dark:bg-trueGray-900 bg-white shadow-sm transition-all ease-out;
+    @apply dark:bg-neutral-900 bg-white shadow-sm transition-all ease-out;
   }
 }
