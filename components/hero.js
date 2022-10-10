@@ -1,15 +1,29 @@
-import Image from "next/image";
 import Container from "./container";
-import heroImg from "../public/img/hero.jpg";
+import { Cursor, useTypewriter } from "react-simple-typewriter";
 
 export default function Hero() {
+  const [text, count] = useTypewriter({
+    words: [
+      "Help to plan your trip.",
+      "Just Call when you need advice.",
+      "Show you around.",
+      "Drive you where you want to go.",
+      "Go shopping with!",
+      "Have a coffee with!",
+    ],
+    loop: true,
+    delaySpeed: 2000,
+  });
+
   return (
     <div className="w-full bg-fixed bg-hero-background bg-center bg-cover">
       <Container className="flex h-full md:pb-40 pt-[6rem] max-w-7xl mx-auto flex-wrap flex-col md:flex-row">
-        <div className="max-w-2xl mb-8 md:mt-28">
+        <div className="max-w-4xl mb-8 md:mt-28">
           <h1 className="text-3xl font-bold leading-snug tracking-tight text-trueGray-900 lg:text-4xl lg:leading-tight xl:text-6xl xl:leading-tight dark:text-white">
-            Free Landing Page Template for{" "}
-            <span className="text-[#ff7300]">startups</span>
+            Find some local, who speaks your language to{" "}
+            <span className="text-[#ff7300]">
+              {text} <Cursor />
+            </span>
           </h1>
           <p className="py-5 text-xl leading-normal text-trueGray-900 lg:text-xl xl:text-2xl dark:text-white">
             Nextly is a free landing page & marketing website template for

@@ -1,7 +1,7 @@
 import Link from "next/link";
 import ThemeChanger from "./DarkSwitch";
 import { Disclosure } from "@headlessui/react";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 export default function Navbar() {
   const navigation = ["Product", "Features", "Pricing", "Company", "Blog"];
@@ -51,7 +51,7 @@ export default function Navbar() {
 
                 <Disclosure.Button
                   aria-label="Toggle Menu"
-                  className="px-2 py-1 ml-auto text-gray-500 rounded-md lg:hidden hover:text-indigo-500 focus:text-indigo-500 focus:bg-indigo-100 focus:outline-none dark:text-gray-300 dark:focus:bg-trueGray-700"
+                  className="px-2 py-1 ml-auto text-black rounded-md lg:hidden hover:text-yellow-500 focus:text-yellow-500 focus:outline-none dark:text-white dark:hover:text-yellow-500 dark:focus:text-yellow-500"
                 >
                   <svg
                     className="w-6 h-6 fill-current"
@@ -74,17 +74,17 @@ export default function Navbar() {
                   </svg>
                 </Disclosure.Button>
 
-                <Disclosure.Panel className="flex flex-wrap w-full my-5 lg:hidden">
+                <Disclosure.Panel className="flex flex-wrap w-full transition-all ease-out delay-300 max-w-full mx-auto my-5 lg:hidden">
                   <>
                     {navigation.map((item, index) => (
                       <Link key={index} href="/">
-                        <a className="w-full px-4 py-2 -ml-4 text-gray-500 rounded-md dark:text-gray-300 hover:text-indigo-500 focus:text-indigo-500 focus:bg-indigo-100  focus:outline-none dark:focus:bg-gray-800">
+                        <a className="w-full px-4 py-2 text-center text-trueGray-900 rounded-md dark:text-white hover:bg-yellow-500/20 focus:bg-yellow-500/20 focus:outline-none dark:hover:bg-yellow-500/20">
                           {item}
                         </a>
                       </Link>
                     ))}
                     <Link href="/">
-                      <a className="w-full px-6 py-2 mt-3 text-center text-white bg-indigo-600 rounded-md lg:ml-5">
+                      <a className="w-full px-6 py-2 mt-3 text-center uppercase text-white bg-yellow-600 rounded-md lg:ml-5">
                         Get Started
                       </a>
                     </Link>
@@ -101,7 +101,7 @@ export default function Navbar() {
             {navigation.map((menu, index) => (
               <li className="mr-3 nav__item " key={index}>
                 <Link href="/">
-                  <a className="inline-block px-4 py-2 text-lg font-normal text-gray-800 no-underline rounded-md dark:text-gray-200  focus:text-indigo-500 focus:bg-indigo-100 focus:outline-none dark:focus:bg-gray-800 dark:hover:text-yellow-500 hover:text-yellow-600 ">
+                  <a className="inline-block px-4 py-2 text-lg font-normal text-gray-800 no-underline rounded-md dark:text-white  focus:text-indigo-500 focus:bg-indigo-100 focus:outline-none dark:focus:bg-gray-800 dark:hover:text-yellow-500 hover:text-yellow-600 ">
                     {menu}
                   </a>
                 </Link>
