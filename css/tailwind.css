@@ -13,6 +13,6 @@
   }
 
   .Navbar.active {
-    @apply dark:bg-neutral-900 bg-white shadow-sm transition-all ease-out;
+    @apply dark:bg-trueGray-900 bg-white shadow-sm transition-all ease-out;
   }
 }
