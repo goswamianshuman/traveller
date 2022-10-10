@@ -6,7 +6,7 @@ import { ChevronUpIcon } from "@heroicons/react/solid";
 export default function Faq() {
   return (
     <Container className="!p-0">
-      <div className="w-full max-w-2xl p-2 mx-auto rounded-2xl transition-all ease-linear delay-700">
+      <div className="w-full max-w-6xl p-2 mx-auto rounded-2xl transition-all ease-linear delay-700">
         {faqdata.map((item, index) => (
           <div key={item.question} className="mb-5">
             <Disclosure>
@@ -17,10 +17,10 @@ export default function Faq() {
                     <ChevronUpIcon
                       className={`${
                         open ? "transform rotate-180" : ""
-                      } w-5 h-5 text-indigo-500`}
+                      } w-5 h-5 text-yellow-500`}
                     />
                   </Disclosure.Button>
-                  <Disclosure.Panel className="px-4 pt-4 pb-2 text-gray-500 dark:text-gray-300">
+                  <Disclosure.Panel className="px-4 pt-4 pb-2 text-yellow-500 dark:text-yellow-500 text-sm">
                     {item.answer}
                   </Disclosure.Panel>
                 </>
