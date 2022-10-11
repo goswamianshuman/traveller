@@ -30,7 +30,7 @@ export default function Navbar() {
               <div className="flex flex-wrap items-center justify-between w-full lg:w-auto">
                 <Link href="/">
                   <a className="flex items-center space-x-2 text-2xl font-medium text-[#ff7300]">
-                    <span>
+                    {/* <span>
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         viewBox="0 0 24 24"
@@ -44,8 +44,8 @@ export default function Navbar() {
                           clip-rule="evenodd"
                         />
                       </svg>
-                    </span>
-                    <span>Podróżnik</span>
+                    </span> */}
+                    <span>🔗 heyllo.world</span>
                   </a>
                 </Link>
 

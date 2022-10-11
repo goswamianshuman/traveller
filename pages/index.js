@@ -2,22 +2,22 @@ import Head from "next/head";
 import Hero from "../components/hero";
 import Navbar from "../components/navbar";
 import SectionTitle from "../components/sectionTitle";
-
-import { benefitOne, benefitTwo } from "../components/data";
-import Video from "../components/video";
+import { benefitOne } from "../components/data";
 import Benefits from "../components/benefits";
 import Footer from "../components/footer";
-import Testimonials from "../components/testimonials";
 import Cta from "../components/cta";
 import Faq from "../components/faq";
 import PopupWidget from "../components/popupWidget";
 import ImageGrid from "../components/ImageGrid";
+import Trip from "../components/Trip";
+import Ride from "../components/Ride";
+import Company from "../components/Company";
 
 export default function Home() {
   return (
     <div>
       <Head>
-        <title>Podróżnik</title>
+        <title>heyllo.world</title>
         <meta name="description" content="Travel around the world" />
         <link rel="icon" href="/fav.svg" />
       </Head>
@@ -26,39 +26,27 @@ export default function Home() {
       <Hero />
       <section className="max-w-7xl mx-auto">
         <SectionTitle
-          pretitle="Nextly Benefits"
-          title=" Why should you use this landing page"
+          title=" Travel - Stress Free!"
+          pretitle="Visiting a new place is fun, but sometimes can also be stressful - especially when
+          you don’t know anyone local or don’t speak the language"
         >
-          Nextly is a free landing page & marketing website template for
-          startups and indie projects. Its built with Next.js & TailwindCSS. And
-          its completely open-source.
+          Heyllo helps you find a local host who can speak your language and
+          help you with services you want
         </SectionTitle>
         <Benefits data={benefitOne} />
         <ImageGrid />
-        <Benefits imgPos="right" data={benefitTwo} />
+        <Trip />
+        <Ride />
         <SectionTitle
-          pretitle="Watch a video"
-          title="Learn how to fullfil your needs"
+          pretitle="Someone to Call"
+          title="Don’t know anyone in a new city? No stress.."
         >
-          This section is to highlight a promo or demo video of your product.
-          Analysts says a landing page with video has 3% more conversion rate.
-          So, don't forget to add one. Just like this.
+          Book a local who is available to call anytime you get stuck, or just
+          need some advice
         </SectionTitle>
-        <Video />
-        <SectionTitle
-          pretitle="Testimonials"
-          title="Here's what our customers said"
-        >
-          Testimonails is a great way to increase the brand trust and awareness.
-          Use this section to highlight your popular customers.
-        </SectionTitle>
-        <Testimonials />
-        <SectionTitle pretitle="FAQ" title="Frequently Asked Questions">
-          Answer your customers possible questions here, it will increase the
-          conversion rate as well as support or chat requests.
-        </SectionTitle>
-        <Faq />
-        {/* <Cta /> */}
+
+        <Company />
+        <Cta />
         <Footer />
         <PopupWidget />
       </section>
