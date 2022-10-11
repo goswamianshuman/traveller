@@ -8,12 +8,11 @@ import {
 } from "@heroicons/react/outline";
 
 import benefitOneImg from "../public/img/benefit-one.png";
-import benefitTwoImg from "../public/img/benefit-two.png";
 
 const benefitOne = {
   title: "Personal and the way you want",
   desc: `No “packaged” or “curated experiences” picked by travel agents or hosts that offers
-  little flexibility. Create your own experience “one on one” with a local host - just the
+  little flexibility. Create your own experience “one on one” with a local host  - just the
   Homepage v1 3
   way you want and at a fraction of the cost`,
   image: benefitOneImg,
@@ -39,7 +38,6 @@ const benefitOne = {
 const benefitTwo = {
   title: "Offer more benefits here",
   desc: "You can use this same layout with a flip image to highlight your rest of the benefits of your product. It can also contain an image or Illustration as above section along with some bullet points.",
-  image: benefitTwoImg,
   bullets: [
     {
       title: "Mobile Responsive Template",
