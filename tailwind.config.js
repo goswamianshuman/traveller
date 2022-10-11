@@ -11,7 +11,7 @@ module.exports = {
         trueGray: colors.trueGray,
       },
       backgroundImage: {
-        "hero-background": "url('/img/hero.jpg')",
+        "hero-background": "url('/img/hero.png')",
       },
     },
     fontFamily: {

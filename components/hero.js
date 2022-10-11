@@ -16,11 +16,11 @@ export default function Hero() {
   });
 
   return (
-    <div className="w-full bg-fixed bg-hero-background bg-center bg-cover">
-      <Container className="flex h-full md:pb-40 pt-[6rem] max-w-7xl mx-auto flex-wrap flex-col md:flex-row">
-        <div className="max-w-4xl mb-8 md:mt-28">
+    <div className="w-full bg-fixed bg-hero-background bg-center bg-cover bg-no-repeat">
+      <Container className="flex h-full md:pb-40 pt-[4rem] max-w-7xl mx-auto flex-wrap flex-col md:flex-row">
+        <div className="max-w-[58rem] mb-8 md:mt-28">
           <h1 className="text-3xl font-bold leading-snug tracking-tight text-trueGray-900 lg:text-4xl lg:leading-tight xl:text-6xl xl:leading-tight dark:text-white">
-            Find some local, who speaks your language to{" "}
+            Find some local, who speaks your language to <br />
             <span className="text-[#ff7300]">
               {text} <Cursor />
             </span>
