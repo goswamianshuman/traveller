@@ -1,8 +1,10 @@
 import Container from "./container";
 import { Cursor, useTypewriter } from "react-simple-typewriter";
 import Image from "next/image";
+import { useState, useEffect } from "react";
 
 export default function Hero() {
+  const [img, setImg] = useState(0);
   const [text, count] = useTypewriter({
     words: [
       "Help to plan your trip.",
@@ -14,6 +16,25 @@ export default function Hero() {
     ],
     loop: true,
     delaySpeed: 2000,
+  });
+
+  const images = {
+    bg: [
+      "/img/videocall.svg",
+      "/img/personalGuide.svg",
+      "/img/tour.svg",
+      "/img/coffee.svg",
+      "/img/shopping.svg",
+    ],
+    activeImageIndex: img,
+  };
+
+  useEffect((e) => {
+    setInterval(() => {
+      let newActiveIndex =
+        images.activeImageIndex === 4 ? 0 : images.activeImageIndex + 1;
+      setImg(newActiveIndex);
+    }, 1000);
   });
 
   return (
@@ -69,7 +90,11 @@ export default function Hero() {
         </div>
 
         <div className="flex items-cente w-full justify-center lg:absolute lg:w-max right-0 bottom-[20%] z-0">
-          <Image src="/img/videocall.svg" width="521" height="482" />
+          <Image
+            src={images.bg[images.activeImageIndex]}
+            width="521"
+            height="482"
+          />
         </div>
       </Container>
       {/* <Container>
