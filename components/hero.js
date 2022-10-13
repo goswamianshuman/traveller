@@ -1,51 +1,99 @@
 import Container from "./container";
-import { Cursor, useTypewriter } from "react-simple-typewriter";
 import Image from "next/image";
-import { useState, useEffect } from "react";
+import { useState } from "react";
+import TypewriterComponent from "typewriter-effect";
+
+const imageArray = [
+  "/img/videocall.svg",
+  "/img/personalGuide.svg",
+  "/img/tour.svg",
+  "/img/coffee.svg",
+  "/img/shopping.svg",
+];
 
 export default function Hero() {
   const [img, setImg] = useState(0);
-  const [text, count] = useTypewriter({
-    words: [
-      "Help to plan your trip.",
-      "Just Call when you need advice.",
-      "Show you around.",
-      "Drive you where you want to go.",
-      "Go shopping with!",
-      "Have a coffee with!",
-    ],
-    loop: true,
-    delaySpeed: 2000,
-  });
 
-  const images = {
-    bg: [
-      "/img/videocall.svg",
-      "/img/personalGuide.svg",
-      "/img/tour.svg",
-      "/img/coffee.svg",
-      "/img/shopping.svg",
-    ],
-    activeImageIndex: img,
-  };
+  function handleImageChange() {
+    setImg((img) => img + 1);
+    console.log("img at function", img);
+  }
 
-  useEffect((e) => {
-    setInterval(() => {
-      let newActiveIndex =
-        images.activeImageIndex === 4 ? 0 : images.activeImageIndex + 1;
-      setImg(newActiveIndex);
-    }, 1000);
-  });
+  const image = imageArray[img % imageArray.length];
 
   return (
     <div className="w-full bg-fixed bg-hero-background-2 bg-center bg-cover bg-no-repeat">
       <Container className="flex h-full md:pb-40 pt-[4rem] relative max-w-7xl mx-auto flex-wrap flex-col md:flex-row ">
         <div className="max-w-[58rem] mb-8 md:mt-28 z-10">
           <h1 className="text-3xl font-bold leading-snug tracking-tight text-trueGray-900 lg:text-4xl lg:leading-tight xl:text-6xl xl:leading-tight dark:text-white">
-            Find some local, who speaks your language to <br />
-            <span className="text-[#ff7300]">
-              {text} <Cursor />
-            </span>
+            Find someone local, who speaks your language to
+            <br />
+            <TypewriterComponent
+              onInit={(typewriter) => {
+                typewriter
+                  .typeString(
+                    '<span style="color: #ff7300;">Help plan your trip</span>'
+                  )
+                  .pauseFor(1000)
+                  .changeDeleteSpeed(1)
+                  .deleteChars(19)
+                  .callFunction(() => {
+                    handleImageChange(img);
+                    console.log("Typing string 1", img);
+                  })
+                  .typeString(
+                    '<span style="color: #ff7300;">Just Call when you need advice</span>'
+                  )
+                  .pauseFor(1000)
+                  .deleteChars(30)
+                  .callFunction(() => {
+                    handleImageChange(img);
+                    console.log("Typing string 2", img);
+                  })
+                  .typeString(
+                    '<span style="color: #ff7300;">Show you around</span>'
+                  )
+                  .pauseFor(1000)
+                  .deleteChars(15)
+                  .callFunction(() => {
+                    handleImageChange(img);
+                    console.log("Typing string 3", img);
+                  })
+                  .typeString(
+                    '<span style="color: #ff7300;">Give you a ride</span>'
+                  )
+                  .pauseFor(1000)
+                  .deleteChars(15)
+                  .callFunction(() => {
+                    handleImageChange(img);
+                    console.log("Typing string 1", img);
+                  })
+                  .typeString(
+                    '<span style="color: #ff7300;">Go Shopping with</span>'
+                  )
+                  .pauseFor(1000)
+                  .deleteChars(16)
+                  .callFunction(() => {
+                    handleImageChange(img);
+                    console.log("Typing string 1", img);
+                  })
+                  .typeString(
+                    '<span style="color: #ff7300;">Have a coffee with</span>'
+                  )
+                  .pauseFor(1000)
+                  .deleteChars(18)
+                  .callFunction(() => {
+                    handleImageChange(img);
+                    console.log("Typing string 1", img);
+                  })
+                  .deleteAll()
+                  .start();
+              }}
+              options={{
+                autoStart: true,
+                loop: true,
+              }}
+            />
           </h1>
           <p className="py-5 text-base leading-normal text-trueGray-900 lg:text-lg xl:text-xl dark:text-white">
             Coming soon on [App Store icon] & [Play Store icon] <br /> Register
@@ -89,12 +137,8 @@ export default function Hero() {
           </div>
         </div>
 
-        <div className="flex items-cente w-full justify-center lg:absolute lg:w-max right-0 bottom-[20%] z-0">
-          <Image
-            src={images.bg[images.activeImageIndex]}
-            width="521"
-            height="482"
-          />
+        <div className="flex items-center w-full justify-center lg:absolute lg:w-max right-0 bottom-[15%] z-0">
+          <Image src={image} width="521" height="482" />
         </div>
       </Container>
       {/* <Container>
