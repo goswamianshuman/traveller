@@ -7,7 +7,7 @@ import {
   SunIcon,
 } from "@heroicons/react/outline";
 
-import benefitOneImg from "../public/img/benefit-one.png";
+import benefitOneImg from "../public/img/meet.svg";
 
 const benefitOne = {
   title: "Personal and the way you want",

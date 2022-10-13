@@ -14,14 +14,7 @@ export default function Benefits(props) {
           }`}
         >
           <div>
-            <Image
-              src={data.image}
-              width="521"
-              height="482"
-              alt="Benefits"
-              layout="intrinsic"
-              placeholder="blur"
-            />
+            <Image src={data.image} width="521" height="482" alt="Benefits" />
           </div>
         </div>
 

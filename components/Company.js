@@ -12,14 +12,7 @@ export default function Company(props) {
           }`}
         >
           <div>
-            {/* <Image
-              src="/img/benefit-one.png"
-              width="521"
-              height="482"
-              alt="Benefits"
-              layout="intrinsic"
-              placeholder="blur"
-            /> */}
+            <Image src="/img/guide.svg" width="521" height="482" />
           </div>
         </div>
 
