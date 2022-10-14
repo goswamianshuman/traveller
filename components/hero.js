@@ -23,9 +23,9 @@ export default function Hero() {
 
   return (
     <div className="w-full bg-fixed bg-hero-background-2 bg-center bg-cover bg-no-repeat">
-      <Container className="flex h-full md:pb-40 pt-[4rem] relative max-w-7xl mx-auto flex-wrap flex-col md:flex-row ">
-        <div className="max-w-[58rem] mb-8 md:mt-28 z-10">
-          <h1 className="text-3xl font-bold leading-snug tracking-tight text-trueGray-900 lg:text-4xl lg:leading-tight xl:text-6xl xl:leading-tight dark:text-white">
+      <Container className="flex h-full md:pb-40 pt-[5rem] relative max-w-7xl mx-auto flex-wrap flex-col md:flex-row ">
+        <div className="max-w-3xl mb-8 md:mt-28 z-10">
+          <h1 className="text-3xl font-bold leading-snug tracking-tight text-trueGray-900 lg:text-4xl lg:leading-tight xl:text-5xl xl:leading-tight dark:text-white">
             Find someone local, who speaks your language to
             <br />
             <TypewriterComponent
@@ -138,7 +138,7 @@ export default function Hero() {
         </div>
 
         <div className="flex items-center w-full justify-center lg:absolute lg:w-max right-0 bottom-[15%] z-0">
-          <Image src={image} width="521" height="482" />
+          <Image src={image} width="516" height="479" />
         </div>
       </Container>
       {/* <Container>
