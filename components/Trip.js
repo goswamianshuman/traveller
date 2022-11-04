@@ -41,7 +41,7 @@ export default function Trip(props) {
           }`}
         >
           <div>
-            <Image src="/img/Trip.png" width="521" height="482" />
+            <Image src="/img/Trip.svg" width="521" height="482" />
           </div>
         </div>
       </Container>
