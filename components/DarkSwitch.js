@@ -15,7 +15,7 @@ const ThemeChanger = () => {
       {theme === "dark" ? (
         <button
           onClick={() => setTheme("light")}
-          className="text-yellow-600 rounded-full outline-none focus:outline-none"
+          className="text-voilet-600 rounded-full outline-none focus:outline-none"
         >
           <span className="sr-only">Light Mode</span>
 

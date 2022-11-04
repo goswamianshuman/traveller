@@ -12,6 +12,7 @@ import ImageGrid from "../components/ImageGrid";
 import Trip from "../components/Trip";
 import Ride from "../components/Ride";
 import Company from "../components/Company";
+import Call from "../components/Call";
 
 export default function Home() {
   return (
@@ -34,17 +35,11 @@ export default function Home() {
           help you with services you want
         </SectionTitle>
         <Benefits data={benefitOne} />
-        <ImageGrid />
+        {/* <ImageGrid /> */}
         <Trip />
         <Ride />
-        <SectionTitle
-          pretitle="Someone to Call"
-          title="Don’t know anyone in a new city? No stress.."
-        >
-          Book a local who is available to call anytime you get stuck, or just
-          need some advice
-        </SectionTitle>
-
+        <SectionTitle title="Don’t know anyone in a new city? No stress.."></SectionTitle>
+        <Call />
         <Company />
         <Cta />
         <Footer />

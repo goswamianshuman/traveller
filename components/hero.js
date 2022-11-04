@@ -4,11 +4,12 @@ import { useState } from "react";
 import TypewriterComponent from "typewriter-effect";
 
 const imageArray = [
+  "/img/plantrip.svg",
   "/img/videocall.svg",
-  "/img/personalGuide.svg",
-  "/img/tour.svg",
-  "/img/coffee.svg",
+  "/img/personalguide.svg",
+  "/img/driving.svg",
   "/img/shopping.svg",
+  "/img/coffee.svg",
 ];
 
 export default function Hero() {
@@ -22,8 +23,8 @@ export default function Hero() {
   const image = imageArray[img % imageArray.length];
 
   return (
-    <div className="w-full bg-fixed bg-hero-background-2 bg-center bg-cover bg-no-repeat">
-      <Container className="flex h-full md:pb-40 pt-[5rem] relative max-w-7xl mx-auto flex-wrap flex-col md:flex-row ">
+    <div className="w-full bg-fixed bg-center bg-cover bg-no-repeat">
+      <Container className="flex h-full md:pb-40 pt-[0rem] relative max-w-7xl mx-auto flex-wrap flex-col md:flex-row ">
         <div className="max-w-3xl mb-8 md:mt-28 z-10">
           <h1 className="text-3xl font-bold leading-snug tracking-tight text-trueGray-900 lg:text-4xl lg:leading-tight xl:text-5xl xl:leading-tight dark:text-white">
             Find someone local, who speaks your language to
@@ -32,7 +33,7 @@ export default function Hero() {
               onInit={(typewriter) => {
                 typewriter
                   .typeString(
-                    '<span style="color: #ff7300;">Help plan your trip</span>'
+                    '<span style="color: #6e00fe;">Help plan your trip</span>'
                   )
                   .pauseFor(1000)
                   .changeDeleteSpeed(1)
@@ -42,7 +43,7 @@ export default function Hero() {
                     console.log("Typing string 1", img);
                   })
                   .typeString(
-                    '<span style="color: #ff7300;">Just Call when you need advice</span>'
+                    '<span style="color: #6e00fe;">Just Call when you need advice</span>'
                   )
                   .pauseFor(1000)
                   .deleteChars(30)
@@ -51,7 +52,7 @@ export default function Hero() {
                     console.log("Typing string 2", img);
                   })
                   .typeString(
-                    '<span style="color: #ff7300;">Show you around</span>'
+                    '<span style="color: #6e00fe;">Show you around</span>'
                   )
                   .pauseFor(1000)
                   .deleteChars(15)
@@ -60,7 +61,7 @@ export default function Hero() {
                     console.log("Typing string 3", img);
                   })
                   .typeString(
-                    '<span style="color: #ff7300;">Give you a ride</span>'
+                    '<span style="color: #6e00fe;">Give you a ride</span>'
                   )
                   .pauseFor(1000)
                   .deleteChars(15)
@@ -69,7 +70,7 @@ export default function Hero() {
                     console.log("Typing string 1", img);
                   })
                   .typeString(
-                    '<span style="color: #ff7300;">Go Shopping with</span>'
+                    '<span style="color: #6e00fe;">Go Shopping with</span>'
                   )
                   .pauseFor(1000)
                   .deleteChars(16)
@@ -78,7 +79,7 @@ export default function Hero() {
                     console.log("Typing string 1", img);
                   })
                   .typeString(
-                    '<span style="color: #ff7300;">Have a coffee with</span>'
+                    '<span style="color: #6e00fe;">Have a coffee with</span>'
                   )
                   .pauseFor(1000)
                   .deleteChars(18)
@@ -95,22 +96,32 @@ export default function Hero() {
               }}
             />
           </h1>
-          <p className="py-5 text-base leading-normal text-trueGray-900 lg:text-lg xl:text-xl dark:text-white">
-            Coming soon on [App Store icon] & [Play Store icon] <br /> Register
-            early interest and save 5% on your next booking
+          <p className="py-5 text-base leading-normal text-trueGray-900 lg:text-lg xl:text-xl dark:text-white ">
+            <span className="flex gap-4 mb-3 items-center">
+              Coming soon on
+              <img
+                src="img/App_Store.svg"
+                className="h-10 w-10"
+                alt=""
+              /> &{" "}
+              <img src="img/Google_Play.svg" className="h-10 w-10" alt="" />
+            </span>
+            <span>
+              Register early interest and save 5% on your next booking
+            </span>
           </p>
 
           <div className="flex flex-col items-start space-y-3 sm:space-x-4 sm:space-y-0 sm:items-center sm:flex-row">
             <input
               type={"email"}
               placeholder="email"
-              className="outline-none bg-trueGray-100/80 rounded-sm px-6 py-4 border-l-2 border-slate-200/10 text-gray-400 font-semibold placeholder-trueGray-400 transition-all ease-out duration-300 hover:border-yellow-500/40 focus:border-yellow-500 focus:text-yellow-500/70"
+              className="outline-none bg-trueGray-300/80 dark:bg-trueGray-300/30 dark:placeholder-gray-50 rounded-sm px-8 py-4 border-l-2 border-voilet-200/10 text-gray-400 font-semibold placeholder-trueGray-600 transition-all ease-out duration-300 hover:border-voilet-500/40 focus:border-voilet-500 focus:text-voilet-500 focus:font-medium"
             />
             <a
               href="https://web3templates.com/templates/nextly-landing-page-template-for-startups"
               target="_blank"
               rel="noopener"
-              className="px-8 py-4 text-lg font-medium text-center text-white bg-yellow-500 rounded-md "
+              className="px-8 py-4 text-lg font-medium text-center text-white bg-voilet-500 hover:bg-voilet-700 transition-colors ease-out delay-200 rounded-md "
             >
               Register Interest
             </a>
@@ -144,8 +155,8 @@ export default function Hero() {
       {/* <Container>
         <div className="flex flex-col justify-center">
           <div className="text-xl text-center text-neutral-700 dark:text-white">
-            Trusted by <span className="text-[#ff7300] underline">2000</span>
-            <span className="text-[#ff7300]">+</span> customers worldwide
+            Trusted by <span className="text-[#6e00fe] underline">2000</span>
+            <span className="text-[#6e00fe]">+</span> customers worldwide
           </div>
 
           <div className="flex flex-wrap justify-center gap-5 mt-10 md:justify-around">

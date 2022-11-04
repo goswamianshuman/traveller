@@ -51,7 +51,7 @@ export default function PopupWidget() {
       <Disclosure>
         {({ open }) => (
           <>
-            <Disclosure.Button className="fixed z-40 flex items-center justify-center transition duration-300 bg-yellow-500 rounded-full shadow-lg right-5 bottom-5 w-14 h-14 focus:outline-none hover:bg-yellow-600 focus:bg-yellow-600 ease">
+            <Disclosure.Button className="fixed z-[100] flex items-center justify-center transition duration-300 bg-voilet-500 rounded-full shadow-lg right-5 bottom-5 w-14 h-14 focus:outline-none hover:bg-voilet-600 focus:bg-voilet-600 ease">
               <span className="sr-only">Open Contact form Widget</span>
               <Transition
                 show={!open}
@@ -110,7 +110,7 @@ export default function PopupWidget() {
               leaveTo="opacity-0 translate-y-5"
             >
               <Disclosure.Panel className=" flex flex-col overflow-hidden left-0 h-full w-full sm:w-[350px] min-h-[250px] sm:h-[600px] border-none bg-white drop-shadow-xl rounded-md sm:max-h-[calc(100vh-120px)]">
-                <div className="flex flex-col items-center justify-center h-32 p-5 bg-yellow-600">
+                <div className="flex flex-col items-center justify-center h-32 p-5 bg-voilet-600">
                   <h3 className="text-lg text-white">How can we help?</h3>
                   <p className="text-white opacity-70">
                     We usually respond in a few hours
@@ -159,7 +159,7 @@ export default function PopupWidget() {
                           className={`w-full px-3 py-2 placeholder-gray-300 bg-white border border-gray-300 rounded-md focus:outline-none focus:ring   ${
                             errors.name
                               ? "border-red-600 focus:border-red-600 ring-red-100"
-                              : "border-gray-300 focus:border-yellow-600 ring-yellow-100"
+                              : "border-gray-300 focus:border-voilet-600 ring-voilet-100"
                           }`}
                         />
                         {errors.name && (
@@ -190,7 +190,7 @@ export default function PopupWidget() {
                           className={`w-full px-3 py-2 placeholder-gray-300 bg-white border border-gray-300 rounded-md focus:outline-none focus:ring   ${
                             errors.email
                               ? "border-red-600 focus:border-red-600 ring-red-100"
-                              : "border-gray-300 focus:border-yellow-600 ring-yellow-100"
+                              : "border-gray-300 focus:border-voilet-600 ring-voilet-100"
                           }`}
                         />
 
@@ -219,7 +219,7 @@ export default function PopupWidget() {
                           className={`w-full px-3 py-2 placeholder-gray-300 bg-white border border-gray-300 rounded-md h-28 focus:outline-none focus:ring   ${
                             errors.message
                               ? "border-red-600 focus:border-red-600 ring-red-100"
-                              : "border-gray-300 focus:border-yellow-600 ring-yellow-100"
+                              : "border-gray-300 focus:border-voilet-600 ring-voilet-100"
                           }`}
                           required
                         ></textarea>
@@ -232,7 +232,7 @@ export default function PopupWidget() {
                       <div className="mb-3">
                         <button
                           type="submit"
-                          className="w-full px-3 py-4 text-white bg-yellow-500 rounded-md focus:bg-yellow-600 focus:outline-none"
+                          className="w-full px-3 py-4 text-white bg-voilet-500 rounded-md focus:bg-voilet-600 focus:outline-none"
                         >
                           {isSubmitting ? (
                             <svg
@@ -299,7 +299,7 @@ export default function PopupWidget() {
                         </h3>
                         <p className="text-gray-700 md:px-3">{Message}</p>
                         <button
-                          className="mt-6 text-yellow-600 focus:outline-none"
+                          className="mt-6 text-voilet-600 focus:outline-none"
                           onClick={() => reset()}
                         >
                           Go back
@@ -330,7 +330,7 @@ export default function PopupWidget() {
                       </h3>
                       <p className="text-gray-700 md:px-3">{Message}</p>
                       <button
-                        className="mt-6 text-yellow-600 focus:outline-none"
+                        className="mt-6 text-voilet-600 focus:outline-none"
                         onClick={() => reset()}
                       >
                         Go back

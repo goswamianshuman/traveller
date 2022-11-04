@@ -2,39 +2,33 @@ import Image from "next/image";
 import React from "react";
 import Container from "./container";
 
-export default function Ride(props) {
+export default function Call(props) {
   return (
     <>
-      <Container className="flex items-center flex-wrap mb-20 lg:gap-10 lg:flex-nowrap ">
+      <Container className="flex items-center flex-wrap lg:gap-10 lg:flex-nowrap ">
+        <div>
+          <div className="flex flex-col w-full mt-4">
+            <h3 className="max-w-2xl mt-3 text-3xl font-bold leading-snug tracking-tight text-trueGray-800 lg:leading-tight lg:text-4xl dark:text-white">
+              Someone to Call
+            </h3>
+
+            <p className="max-w-2xl py-4 text-lg text-justify leading-normal text-trueGray-600 lg:text-xl xl:text-xl dark:text-gray-300">
+              Book a local who is available to call anytime you get stuck, or
+              just need some advice
+            </p>
+          </div>
+
+          <div className="w-full mt-5">
+            <Benefit />
+          </div>
+        </div>
         <div
           className={`flex items-center justify-center w-full lg:w-1/2 ${
             props.imgPos === "right" ? "lg:order-1" : ""
           }`}
         >
           <div>
-            <Image src="/img/host.svg" width="521" height="482" />
-          </div>
-        </div>
-        <div>
-          <div className="flex flex-col w-full mt-4">
-            <h3 className="max-w-2xl mt-3 text-3xl font-bold leading-snug tracking-tight text-trueGray-800 lg:leading-tight lg:text-4xl dark:text-white">
-              Get a friendly, cheaper Ride
-            </h3>
-
-            <p className="max-w-2xl py-4 text-lg text-justify leading-normal text-trueGray-600 lg:text-xl xl:text-xl dark:text-gray-300">
-              Getting a ride in a new country can be challenging - Taxi drivers
-              may not speak your language or know your location, ridesharing
-              apps like Uber may not work.
-            </p>
-            <p className="max-w-2xl py-4 text-lg text-justify leading-normal text-trueGray-600 lg:text-xl xl:text-xl dark:text-gray-300">
-              Request a host to pick you up from the airport or even show you
-              around in their car - much cheaper than taxis or any ride sharing
-              app
-            </p>
-          </div>
-
-          <div className="w-full mt-5">
-            <Benefit />
+            <Image src="/img/meetvideo.svg" width="521" height="482" />
           </div>
         </div>
       </Container>

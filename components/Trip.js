@@ -5,17 +5,7 @@ import Container from "./container";
 export default function Trip(props) {
   return (
     <>
-      <Container className="flex mt-20 flex-wrap mb-10 lg:gap-10 lg:flex-nowrap ">
-        <div
-          className={`flex items-center justify-center w-full lg:w-1/2 ${
-            props.imgPos === "right" ? "lg:order-1" : ""
-          }`}
-        >
-          <div>
-            <Image src="/img/Trip.png" width="521" height="482" />
-          </div>
-        </div>
-
+      <Container className="flex items-center mt-20 flex-wrap mb-10 lg:gap-10 lg:flex-nowrap ">
         <div
           className={`flex flex-wrap items-center w-full lg:w-1/2 ${
             props.imgPos === "right" ? "lg:justify-end" : ""
@@ -27,26 +17,31 @@ export default function Trip(props) {
                 Plan a Trip
               </h3>
 
-              <p className="max-w-2xl py-4 text-lg leading-normal text-trueGray-600 lg:text-xl xl:text-xl dark:text-gray-300">
+              <p className="max-w-2xl py-4 text-lg text-justify leading-normal text-trueGray-600 lg:text-xl xl:text-xl dark:text-gray-300">
                 Confused with thousands of online blogs, travel guides and
                 reviews offering different views simply for referral
                 commissions, or not getting answers to important questions like
                 “which areas to avoid visiting at night”
               </p>
-
-              <p className="max-w-2xl py-4 text-base leading-normal text-yellow-600 lg:text-lg xl:text-lg dark:text-yellow-600">
+              <p className="max-w-2xl py-4 text-lg text-justify leading-normal text-trueGray-600 lg:text-xl xl:text-xl dark:text-gray-300">
                 Get personal suggestions and recommendations from a local host
-                via video calls
-              </p>
-              <p className="max-w-2xl py-4 text-base leading-normal text-yellow-600 lg:text-lg xl:text-lg dark:text-yellow-600">
-                Get answers to your specific questions and plan your trip
-                without any hassle
+                via video calls Get answers to your specific questions and plan
+                your trip without any hassle
               </p>
             </div>
 
             <div className="w-full mt-5">
               <Benefit />
             </div>
+          </div>
+        </div>
+        <div
+          className={`flex items-center justify-center w-full lg:w-1/2 ${
+            props.imgPos === "right" ? "lg:order-1" : ""
+          }`}
+        >
+          <div>
+            <Image src="/img/Trip.png" width="521" height="482" />
           </div>
         </div>
       </Container>

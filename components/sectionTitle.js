@@ -14,7 +14,7 @@ export default function SectionTitle(props) {
         </h2>
       )}
       {props.pretitle && (
-        <div className="text-sm max-w-4xl mt-3 font-bold tracking-wider text-[#ff7300] uppercase">
+        <div className="text-sm max-w-4xl mt-3 font-extralight md:text-lg tracking-normal text-[#6e00fe] ">
           {props.pretitle}
         </div>
       )}

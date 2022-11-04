@@ -9,7 +9,7 @@
   }
 
   .Navbar {
-    @apply w-full fixed top-0 z-[50];
+    @apply w-full sticky top-0 z-[50];
   }
 
   .Navbar.active {

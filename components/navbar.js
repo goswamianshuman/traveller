@@ -4,7 +4,7 @@ import { Disclosure } from "@headlessui/react";
 import { useState } from "react";
 
 export default function Navbar() {
-  const navigation = ["Product", "Features", "Pricing", "Company", "Blog"];
+  const navigation = ["Host", "Features", "Pricing", "Company", "Blog"];
 
   const [navbar, setNavbar] = useState(false);
 
@@ -22,36 +22,21 @@ export default function Navbar() {
 
   return (
     <div className={navbar ? "Navbar active" : "Navbar"}>
-      <nav className="container relative flex flex-wrap items-center justify-between p-8 pb-4 max-w-7xl mx-auto lg:justify-between xl:px-0">
+      <nav className=" container relative flex flex-wrap items-center justify-between py-8 md:py-6 lg:py-4 max-w-7xl mx-auto lg:justify-between xl:px-0">
         {/* Logo  */}
         <Disclosure>
           {({ open }) => (
             <>
               <div className="flex flex-wrap items-center justify-between w-full lg:w-auto">
                 <Link href="/">
-                  <a className="flex items-center space-x-2 text-2xl font-medium text-[#ff7300]">
-                    {/* <span>
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 24 24"
-                        fill="currentColor"
-                        className="w-6 h-6"
-                      >
-                        <path d="M15.75 8.25a.75.75 0 01.75.75c0 1.12-.492 2.126-1.27 2.812a.75.75 0 11-.992-1.124A2.243 2.243 0 0015 9a.75.75 0 01.75-.75z" />
-                        <path
-                          fill-rule="evenodd"
-                          d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zM4.575 15.6a8.25 8.25 0 009.348 4.425 1.966 1.966 0 00-1.84-1.275.983.983 0 01-.97-.822l-.073-.437c-.094-.565.25-1.11.8-1.267l.99-.282c.427-.123.783-.418.982-.816l.036-.073a1.453 1.453 0 012.328-.377L16.5 15h.628a2.25 2.25 0 011.983 1.186 8.25 8.25 0 00-6.345-12.4c.044.262.18.503.389.676l1.068.89c.442.369.535 1.01.216 1.49l-.51.766a2.25 2.25 0 01-1.161.886l-.143.048a1.107 1.107 0 00-.57 1.664c.369.555.169 1.307-.427 1.605L9 13.125l.423 1.059a.956.956 0 01-1.652.928l-.679-.906a1.125 1.125 0 00-1.906.172L4.575 15.6z"
-                          clip-rule="evenodd"
-                        />
-                      </svg>
-                    </span> */}
-                    <span>🔗 heyllo.world</span>
+                  <a className="flex items-center space-x-2 text-2xl font-medium text-[#6e00fe]">
+                    <span>👋🏻 heyllo</span>
                   </a>
                 </Link>
 
                 <Disclosure.Button
                   aria-label="Toggle Menu"
-                  className="px-2 py-1 ml-auto text-black rounded-md lg:hidden hover:text-yellow-500 focus:text-yellow-500 focus:outline-none dark:text-white dark:hover:text-yellow-500 dark:focus:text-yellow-500"
+                  className="px-2 py-1 ml-auto text-black rounded-md lg:hidden hover:text-voilet-500 focus:text-voilet-500 focus:outline-none dark:text-white dark:hover:text-voilet-500 dark:focus:text-voilet-500"
                 >
                   <svg
                     className="w-6 h-6 fill-current"
@@ -78,16 +63,15 @@ export default function Navbar() {
                   <>
                     {navigation.map((item, index) => (
                       <Link key={index} href="/">
-                        <a className="w-full px-4 py-2 text-center text-trueGray-900 rounded-md dark:text-white hover:bg-yellow-500/20 focus:bg-yellow-500/20 focus:outline-none dark:hover:bg-yellow-500/20">
+                        <a className="w-full px-4 py-2 text-center text-trueGray-900 rounded-md dark:text-white hover:bg-voilet-500/20 focus:bg-voilet-500/20 transition-colors ease-out delay-200 focus:outline-none dark:hover:bg-voilet-500/20">
                           {item}
                         </a>
                       </Link>
                     ))}
-                    <Link href="/">
-                      <a className="w-full px-6 py-2 mt-3 text-center uppercase text-white bg-yellow-600 rounded-md lg:ml-5">
-                        Get Started
-                      </a>
-                    </Link>
+
+                    <a className="w-full px-6 py-2 mt-3 text-center uppercase text-white bg-voilet-600 hover:bg-voilet-700 transition-colors ease-out delay-200  rounded-md lg:ml-5">
+                      Get Started
+                    </a>
                   </>
                 </Disclosure.Panel>
               </div>
@@ -96,12 +80,12 @@ export default function Navbar() {
         </Disclosure>
 
         {/* menu  */}
-        <div className="hidden text-center lg:flex lg:items-center">
+        <div className="hidden  text-center lg:flex lg:items-center">
           <ul className="items-center justify-end flex-1 pt-6 list-none lg:pt-0 lg:flex">
             {navigation.map((menu, index) => (
               <li className="mr-3 nav__item " key={index}>
                 <Link href="/">
-                  <a className="inline-block px-4 py-2 text-lg font-normal text-trueGray-900 no-underline rounded-md dark:text-white  focus:text-yellow-500 focus:outline-none dark:hover:text-yellow-500 hover:text-yellow-600 ">
+                  <a className="inline-block px-4 py-2 text-base font-extralight text-trueGray-900 no-underline rounded-md dark:text-white  focus:text-voilet-500 focus:outline-none dark:hover:text-voilet-500 hover:text-voilet-600 ">
                     {menu}
                   </a>
                 </Link>
@@ -112,7 +96,7 @@ export default function Navbar() {
 
         <div className="hidden mr-3 space-x-4 lg:flex nav__item">
           <Link href="/">
-            <a className="px-6 py-2 bg-yellow-500 text-white  rounded-md md:ml-5">
+            <a className="px-6 py-2 bg-voilet-500 text-white  rounded-md md:ml-5">
               Get Started
             </a>
           </Link>

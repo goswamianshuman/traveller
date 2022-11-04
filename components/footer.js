@@ -14,50 +14,18 @@ export default function Footer() {
             <div>
               {" "}
               <Link href="/">
-                <a className="flex items-center space-x-2 text-2xl font-medium text-yellow-500 dark:text-gray-100">
-                  <span>
-                    <img
-                      src="/fav.svg"
-                      alt="W"
-                      width="32"
-                      height="32"
-                      className="w-8"
-                    />
-                  </span>
-                  <span>Podróżnik</span>
+                <a className="flex items-center space-x-2 text-2xl font-medium text-voilet-500 dark:text-gray-100">
+                  <span>👋🏻 heyllo</span>
                 </a>
               </Link>
             </div>
-
-            <div className="max-w-md mt-4 text-trueGray-600 dark:text-gray-400">
-              Nextly is a free landing page & marketing website template for
-              startups and indie projects. Its built with Next.js & TailwindCSS.
-              And its completely open-source.
-            </div>
-
-            {/* <div className="mt-5">
-              <a
-                href="https://vercel.com/?utm_source=web3templates&utm_campaign=oss"
-                target="_blank"
-                rel="noopener"
-                className="relative block w-44"
-              >
-                <Image
-                  src="/img/vercel.svg"
-                  layout="responsive"
-                  alt="Powered by Vercel"
-                  width="212"
-                  height="44"
-                />
-              </a>
-            </div> */}
           </div>
 
           <div>
             <div className="flex flex-wrap w-full -mt-2 -ml-3 lg:ml-0">
               {navigation.map((item, index) => (
                 <Link key={index} href="/">
-                  <a className="w-full px-4 py-2 text-gray-500 rounded-md dark:text-gray-300 hover:text-yellow-500 dark:hover:text-yellow-500 focus:text-yellow-500 focus:bg-indigo-100 focus:outline-none dark:focus:bg-trueGray-700">
+                  <a className="w-full px-4 py-2 text-gray-500 rounded-md dark:text-gray-300 hover:text-voilet-500 dark:hover:text-voilet-500 focus:text-voilet-500 focus:bg-indigo-100 focus:outline-none dark:focus:bg-trueGray-700">
                     {item}
                   </a>
                 </Link>
@@ -68,7 +36,7 @@ export default function Footer() {
             <div className="flex flex-wrap w-full -mt-2 -ml-3 lg:ml-0">
               {legal.map((item, index) => (
                 <Link key={index} href="/">
-                  <a className="w-full px-4 py-2 text-gray-500 rounded-md dark:text-gray-300 hover:text-yellow-500 dark:hover:text-yellow-500 focus:text-yellow-500 focus:bg-indigo-100 focus:outline-none dark:focus:bg-trueGray-700">
+                  <a className="w-full px-4 py-2 text-gray-500 rounded-md dark:text-gray-300 hover:text-voilet-500 dark:hover:text-voilet-500 focus:text-voilet-500 focus:bg-indigo-100 focus:outline-none dark:focus:bg-trueGray-700">
                     {item}
                   </a>
                 </Link>
@@ -84,7 +52,7 @@ export default function Footer() {
                 rel="noopener"
               >
                 <span className="sr-only ">Twitter</span>
-                <span className="hover:text-yellow-500 dark:hover:text-yellow-500">
+                <span className="hover:text-voilet-500 dark:hover:text-voilet-500">
                   <Twitter />
                 </span>
               </a>
@@ -94,7 +62,7 @@ export default function Footer() {
                 rel="noopener"
               >
                 <span className="sr-only">Facebook</span>
-                <span className="hover:text-yellow-500 dark:hover:text-yellow-500">
+                <span className="hover:text-voilet-500 dark:hover:text-voilet-500">
                   <Facebook />
                 </span>
               </a>
@@ -104,34 +72,18 @@ export default function Footer() {
                 rel="noopener"
               >
                 <span className="sr-only">Instagram</span>
-                <span className="hover:text-yellow-500 dark:hover:text-yellow-500">
+                <span className="hover:text-voilet-500 dark:hover:text-voilet-500">
                   <Instagram />
                 </span>
               </a>
               <a href="https://linkedin.com/" target="_blank" rel="noopener">
                 <span className="sr-only">Linkedin</span>
-                <span className="hover:text-yellow-500 dark:hover:text-yellow-500">
+                <span className="hover:text-voilet-500 dark:hover:text-voilet-500">
                   <Linkedin />
                 </span>
               </a>
             </div>
           </div>
-        </div>
-
-        <div className="flex w-full items-center justify-between my-10 text-xs text-center">
-          <span className="text-trueGray-600 dark:text-trueGray-400">
-            Copyright © {new Date().getFullYear()}.
-          </span>
-          <span className="text-trueGray-600 dark:text-trueGray-400">
-            Made with ♥ by Web3Templates.
-          </span>
-          {/* <a href="https://web3templates.com/" target="_blank" rel="noopener">
-            Web3Templates.
-          </a>{" "}
-          Illustrations from{" "}
-          <a href="https://www.glazestock.com/" target="_blank" rel="noopener ">
-            Glazestock
-          </a> */}
         </div>
       </Container>
     </div>
